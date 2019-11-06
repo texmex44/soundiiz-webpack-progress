@@ -14,18 +14,13 @@ module.exports = function SoundiizProgressWebpack(options) {
     '/\\__/ / (_) | |_| | | | | (_| | | |/ / \n' +
     '\\____/ \\___/ \\__,_|_| |_|\\__,_|_|_/___|\n';
 
-  var compilerName = '----------- WEBPACK COMPILER -----------\n\n';
-  var envName = '';
-  if(options && options.env){
-    switch(options.env){
-      case "prod":
-        envName = chalk.red.bold('!-!-!-!-!-!-! ENV PROD !-!-!-!-!-!\n\n');
-        break;
-      default:
-        envName = chalk.green.bold('----------- ENV DEV -----------\n\n');
-        break;
-    }
+  var envName = chalk.blue.bold('( DEV )');
+  if(options && options.env && options.env === "prod"){
+    envName = chalk.red.bold('! PROD !');
   }
+
+  var compilerName = '----------- WEBPACK COMPILER '+envName+' -----------\n\n';
+
 
   var stream = options.stream || process.stderr;
   var enabled = stream && stream.isTTY;
@@ -55,7 +50,6 @@ module.exports = function SoundiizProgressWebpack(options) {
     total: 100,
     clear: false
   }, options);
-  var test = ""
 
   var bar = new ProgressBar(barFormat, barOptions);
 
@@ -88,7 +82,6 @@ module.exports = function SoundiizProgressWebpack(options) {
       stream.write('\n');
       stream.write(chalk.magenta.bold(ASCIISOUNDIIZ));
       stream.write(compilerName);
-      stream.write(envName);
       running = true;
       startTime = new Date;
       lastPercent = 0;
