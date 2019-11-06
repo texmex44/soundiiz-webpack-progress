@@ -19,7 +19,7 @@ module.exports = function SoundiizProgressWebpack(options) {
     envName = chalk.red.bold('! PROD !');
   }
 
-  var compilerName = '----------- WEBPACK COMPILER '+envName+' -----------\n\n';
+  var compilerName = '------- WEBPACK COMPILER '+envName+' -------\n\n';
 
 
   var stream = options.stream || process.stderr;
