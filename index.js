@@ -56,6 +56,7 @@ module.exports = function SoundiizProgressWebpack(options) {
     clear: false
   }, options);
 
+
   var bar = new ProgressBar(barFormat, barOptions);
 
   var running = false;
