@@ -23,6 +23,7 @@ module.exports = function SoundiizProgressWebpack(options) {
 
   var ASCIIFINAL = (options && options.sdz)?ASCIISDZSH:ASCIISOUNDIIZ;
 
+
   var envName = chalk.blue.bold('( DEV )');
   if(options && options.env && options.env === "prod"){
     envName = chalk.red.bold('! PROD !');
