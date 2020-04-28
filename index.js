@@ -19,7 +19,7 @@ module.exports = function SoundiizProgressWebpack(options) {
     ' | (___ | |  | | / /  | (___ | |__| |\n' +
     '  \\___ \\| |  | |/ /    \\___ \\|  __  |\n' +
     '  ____) | |__| / /__ _ ____) | |  | |\n' +
-    ' |_____/|_____/_____(_)_____/|_|  |_|';
+    ' |_____/|_____/_____(_)_____/|_|  |_|\n';
 
   var ASCIIFINAL = (options && options.sdz)?ASCIISDZSH:ASCIISOUNDIIZ;
 
