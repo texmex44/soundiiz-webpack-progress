@@ -1,6 +1,6 @@
 {
   "name": "soundiiz-webpack-progress",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "description": "Progress terminal output for webpack build",
   "main": "index.js",
   "scripts": {
