@@ -21,7 +21,7 @@ module.exports = function SoundiizProgressWebpack(options) {
     '  ____) | |__| / /__ _ ____) | |  | |\n' +
     ' |_____/|_____/_____(_)_____/|_|  |_|';
 
-  var ASCIIFINAL = (option.sdz)?ASCIISDZSH:ASCIISOUNDIIZ
+  var ASCIIFINAL = (option && option.sdz)?ASCIISDZSH:ASCIISOUNDIIZ;
 
   var envName = chalk.blue.bold('( DEV )');
   if(options && options.env && options.env === "prod"){
