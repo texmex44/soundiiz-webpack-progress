@@ -14,6 +14,15 @@ module.exports = function SoundiizProgressWebpack(options) {
     '/\\__/ / (_) | |_| | | | | (_| | | |/ / \n' +
     '\\____/ \\___/ \\__,_|_| |_|\\__,_|_|_/___|\n';
 
+  var ASCIISDZSH = '   _____ _____ ______   _____ _    _ \n' +
+    '  / ____|  __ \\___  /  / ____| |  | |\n' +
+    ' | (___ | |  | | / /  | (___ | |__| |\n' +
+    '  \\___ \\| |  | |/ /    \\___ \\|  __  |\n' +
+    '  ____) | |__| / /__ _ ____) | |  | |\n' +
+    ' |_____/|_____/_____(_)_____/|_|  |_|';
+
+  var ASCIIFINAL = (option.sdz)?ASCIISDZSH:ASCIISOUNDIIZ
+
   var envName = chalk.blue.bold('( DEV )');
   if(options && options.env && options.env === "prod"){
     envName = chalk.red.bold('! PROD !');
@@ -80,7 +89,7 @@ module.exports = function SoundiizProgressWebpack(options) {
       stream.write('\n');
       stream.write('\n');
       stream.write('\n');
-      stream.write(chalk.magenta.bold(ASCIISOUNDIIZ));
+      stream.write(chalk.magenta.bold(ASCIIFINAL));
       stream.write(compilerName);
       running = true;
       startTime = new Date;
